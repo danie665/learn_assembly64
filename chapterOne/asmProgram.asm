@@ -1,15 +1,9 @@
 ; asmProgram.asm	example program to illustrate asm/cpp hybrid
 ; Assemble:		nasm -f elf64 -o asmProgram.o asmProgram.asm
-; Link:			ld -o asmProgram asmProgram.o
 
 section .text
+	global asmFunc	; Declares the function to be global (visible to the linker)
 
-	option casemap:none
+asmFunc:
+	ret		; Return to caller
 
-	public asmFunc
-asmFunc PROC
-
-	ret		; Returns to caller
-
-asmFunc ENDP
-	END

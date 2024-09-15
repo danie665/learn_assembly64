@@ -1,6 +1,6 @@
 ; programShell.asm	do nothing
-; Assemble:		nasm -f elf64 -l programShell.lst programShell.asm
-; Link:			gcc -m64 -no-pie -o programShell programShell.o
+; Assemble:		nasm -f elf64 -o programShell.o programShell.asm
+; Link:			ld -o programShell programShell.o
 ; Run:			./programShell
 
 ; Comments consist of all text from a semicolon character
@@ -10,14 +10,8 @@
 ; this directive go in the section of memory reserved for machine
 ; instructions (code).
 
-	section	.text
+section	.text
+	global _start	; Declare the entry point
 
-; Here is the "main" function. (This example assumes that the
-; assembly language program is a stand-alone program with its
-; own main function.)
-
-	global main
-
-main:
-
-	ret	; returns to caller
+_start:			; Entry point label
+	ret		; Returns to caller

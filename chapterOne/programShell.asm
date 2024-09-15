@@ -14,4 +14,6 @@ section	.text
 	global _start	; Declare the entry point
 
 _start:			; Entry point label
-	ret		; Returns to caller
+	mov rax, 60	; syscall number of sys_exit in 64-bit Linux
+	xor rdi, rdi	; exit code 0
+	syscall		; make the syscall to exit the program

@@ -9,8 +9,8 @@ section .text
 	global asmFunc
 
 asmFunc:
-	sub 	rsp, 56		; allocate space on the stack
-	lea	rcx, [fmtStr]	; load address of fmtStr into rcx
-	call	printf		; call printf
-	add	rsp, 56		; deallocate stack space
+	sub rsp, 8		; align stack to 16-byte boundary
+	lea rdi, [fmtStr]	; load address of fmtStr into rdi
+	call printf		; call printf
+	add rsp, 8		; deallocate stack space
 	ret			; return from the function

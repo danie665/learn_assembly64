@@ -39,7 +39,7 @@ asmMain:
 
 	; Print the string input by the user
 	lea rdi, [fmtStr]		; First argument: format string
-	lea rdx, input			; Second argument: user input string
+	lea rsi, [input]		; Second argument: user input string
 	call printf
 
 	add rsp, 8			; Restore the stack

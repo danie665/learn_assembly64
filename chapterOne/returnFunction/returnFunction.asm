@@ -34,7 +34,7 @@ asmMain:
 
 	; Read a line of text from the user
 	lea rdi, [input]
-	mov rdx, maxLen			; Pass maxLen as the second arg to readLine
+	mov rsi, maxLen			; Pass maxLen as the second arg to readLine
 	call readLine
 
 	; Print the string input by the user

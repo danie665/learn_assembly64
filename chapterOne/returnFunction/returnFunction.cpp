@@ -1,5 +1,5 @@
 /* returnFunction.cpp:	Return function results from assembly language to C++
- * Compile:		g++ no-pie -o returnFunction.cpp returnFunction.o
+ * Compile:		g++ -no-pie -o returnFunction returnFunction.cpp returnFunction.o
  */
 
 #include <errno.h>
@@ -34,7 +34,7 @@ int main(void)
   try
   {
     char *title = getTitle();
-    printf("Calling %x:\n", title);
+    printf("Calling %s:\n", title);
     asmMain();
     printf("%s terminated\n", title);
   }

@@ -1,6 +1,6 @@
 ; procedure.asm		demonstrate a user-defined procedure
 ; Assemble:		nasm -f elf64 -o procedure.o procedure.asm
-; Link: 		ld -o procedure procedure.o
+; Link: 		gcc -pie -nostartfiles -o procedure procedure.o
 ; Run:			./procedure
 
 section	.text

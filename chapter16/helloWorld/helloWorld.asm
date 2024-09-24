@@ -1,7 +1,7 @@
-; helloSecondWorld.asm	pure-assembly hello world
-; Assemble:		nasm -f elf64 -o helloSecondWorld.o helloSecondWorld.asm
-; Link:			gcc -pie -nostartfiles -o helloSecondWorld helloSecondWorld.o
-; Run:			./helloSecondWorld
+; helloWorld.asm	pure-assembly hello world
+; Assemble:		nasm -f elf64 -o helloWorld.o helloWorld.asm
+; Link:			gcc -pie -nostartfiles -o helloWorld helloWorld.o
+; Run:			./helloWorld
 
 section .data
 	hwStr db "Hello, world!", 0xA	; our hello world string with a newline
